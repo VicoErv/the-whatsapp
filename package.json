@@ -1,0 +1,18 @@
+{
+  "name": "soup",
+  "version": "1.0.0",
+  "description": "whatsapp",
+  "main": "src/soup.js",
+  "repository": "https://github.com/VicoErv/soup",
+  "author": "Vico",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "https-proxy-agent": "^2.2.1",
+    "qrcode-terminal": "^0.12.0",
+    "ws": "^6.1.2"
+  },
+  "scripts": {
+    "start": "node src/soup.js"
+  }
+}
