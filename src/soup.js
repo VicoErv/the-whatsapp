@@ -13,7 +13,6 @@ var agent = HttpsProxyAgent(proxy);
 options.agent = agent;
 
 const wss = new WebSocket(endpoint, {
-    agent: agent,
     headers: {
         Origin: 'https://web.whatsapp.com',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36',
@@ -28,7 +27,7 @@ wss.on('open', function () {
 });
 
 let no = 1;
-let payload = '62812';
+let payload = '62897838';
 
 wss.on('message', function (data) {
     if (typeof data == 'string') {
@@ -44,6 +43,7 @@ wss.on('message', function (data) {
         }
 
         if (data.startsWith("s1")) {
+	    console.log(json);
             wss.send('309.--0,,["query","ProfilePicThumb","089898989898@c.us"]');
         } else if (data.startsWith("309")) {
             if (json.hasOwnProperty('eurl')) {
